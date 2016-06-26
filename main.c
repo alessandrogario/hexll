@@ -65,10 +65,10 @@ int main(int argc, char *argv[], char *envp[])
             printf("%0*" PRIXPTR "    ", offset_digit_count, current_offset);
 
         if (isalnum(current_byte) != 0)
-            printf("%s%2c%s ", color_escape_sequence, (char) current_byte, "\033[0m");
+            printf("%s.%c%s ", color_escape_sequence, (char) current_byte, "\033[0m");
 
         else if (isspace(current_byte) != 0)
-            printf("   ");
+            printf(".. ");
 
         else
             printf("%02X ", (int) current_byte);
