@@ -1,10 +1,13 @@
-hexll: main.o
-	gcc main.o -o hexll
+build/bin/hexll: build/obj/main.o
+	gcc build/obj/main.o -o build/bin/hexll
 
-main.o: main.c
-	gcc -Wall -Werror -Wconversion -pedantic -c main.c
+build/obj/main.o: src/main.c
+	mkdir -p build/obj
+	mkdir build/bin
+	
+	gcc -Wall -Werror -Wconversion -pedantic -c src/main.c -o build/obj/main.o
 
 .PHONY: clean
 clean:
-	rm main.o hexll
+	rm -r build
 

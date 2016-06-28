@@ -1,5 +1,7 @@
 # Simple tool that dumps binary data in HexII format.
 
+![hexll screenshot](https://raw.githubusercontent.com/alessandrogario/hexll/master/screenshots/hexll.png)
+
 You can tweak how the output is printed using the following environment variables:
 
 * Offset digits: HEXLL_OFFSETDIGITCOUNT
